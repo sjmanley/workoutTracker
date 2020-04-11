@@ -8,11 +8,11 @@ mongoose.connect("mongodb://localhost/workout", {
 
 let workoutSeed = [
   {
-    day: new Date().setDate(new Date().getDate()-10),
+    day: new Date(new Date().setDate(new Date().getDate() - 10)),
     exercises: [
       {
         type: "resistance",
-        name: "Bicep Curl",
+        name: "Glute Press",
         duration: 20,
         weight: 100,
         reps: 10,
@@ -21,33 +21,33 @@ let workoutSeed = [
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-9),
+    day: new Date(new Date().setDate(new Date().getDate() - 9)),
     exercises: [
       {
         type: "resistance",
-        name: "Lateral Pull",
+        name: "Chest Press",
         duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-8),
-    exercises: [
-      {
-        type: "resistance",
-        name: "Push Press",
-        duration: 25,
-        weight: 185,
+        weight: 65,
         reps: 8,
         sets: 4
       }
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-7),
+    day: new Date(new Date().setDate(new Date().getDate() - 8)),
+    exercises: [
+      {
+        type: "resistance",
+        name: "Glute press",
+        duration: 25,
+        weight: 100,
+        reps: 8,
+        sets: 4
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() - 7)),
     exercises: [
       {
         type: "cardio",
@@ -58,78 +58,76 @@ let workoutSeed = [
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-6),
+    day: new Date(new Date().setDate(new Date().getDate() - 6)),
+    exercises: [
+      {
+        type: "cardio",
+        name: "Hot Yoga",
+        duration: 60
+        
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() - 5)),
     exercises: [
       {
         type: "resistance",
-        name: "Bench Press",
+        name: "DeadLift",
         duration: 20,
-        weight: 285,
+        weight: 90,
         reps: 10,
         sets: 4
       }
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-5),
+    day: new Date(new Date().setDate(new Date().getDate() - 4)),
     exercises: [
       {
         type: "resistance",
-        name: "Bench Press",
-        duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-4),
-    exercises: [
-      {
-        type: "resistance",
-        name: "Quad Press",
+        name: "Band pull aparts",
         duration: 30,
-        weight: 300,
+        weight: 10,
         reps: 10,
         sets: 4
       }
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-3),
+    day: new Date(new Date().setDate(new Date().getDate() - 3)),
     exercises: [
       {
         type: "resistance",
-        name: "Bench Press",
+        name: "hamstring curls",
         duration: 20,
-        weight: 300,
+        weight: 60,
         reps: 10,
         sets: 4
       }
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-2),
+    day: new Date(new Date().setDate(new Date().getDate() - 2)),
     exercises: [
       {
         type: "resistance",
-        name: "Military Press",
+        name: "Arnold press",
         duration: 20,
-        weight: 300,
+        weight: 25,
         reps: 10,
         sets: 4
       }
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-1),
+    day: new Date(new Date().setDate(new Date().getDate() - 1)),
     exercises: [
       {
-        type: "resistance",
-        name: "Bench",
+        type: "Cardio",
+        name: "elliptical",
         duration: 30,
-        distance: 2
+        distance: 3
       }
     ]
   }
@@ -145,3 +143,4 @@ db.Workout.deleteMany({})
     console.error(err);
     process.exit(1);
   });
+  
