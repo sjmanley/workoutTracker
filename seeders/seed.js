@@ -64,7 +64,7 @@ let workoutSeed = [
         type: "cardio",
         name: "Hot Yoga",
         duration: 60
-        
+
       }
     ]
   },
@@ -143,4 +143,3 @@ db.Workout.deleteMany({})
     console.error(err);
     process.exit(1);
   });
-  
